@@ -6,5 +6,6 @@ public class PrimeiraClasseJava {
 		
 		//escreve texto no console
 		System.out.println("Meu primeiro programa em Java - do curso Java Web.");
+		System.out.println("Meu primeiro programa em Java - do curso Java Web.");
 	}
 }
