@@ -20,9 +20,12 @@ import excel_treino.model.Livro;
 
 public class ExcelUtils {
 	
+	String endereco = "C:\\Users\\pmano\\git\\estudo-java\\excel_treino\\src\\main\\java";
+	String planilha = "C:\\Users\\pmano\\git\\estudo-java\\excel_treino\\src\\main\\resources\\biblioteca.xlsx";
+	
 	
 	public void salvarNoExcel(Livro livro) throws IOException{
-		File file = new File("C:\\curso-java\\excel_treino\\src\\main\\resources\\biblioteca.xlsx");
+		File file = new File(endereco);
 		String novoId = "0";
 		//cria nova planilha
 		if(!file.exists()) {
@@ -126,7 +129,7 @@ public class ExcelUtils {
 	
 	public void listarLivros() throws IOException{
 		
-		File file = new File("C:\\curso-java\\excel_treino\\src\\main\\resources\\biblioteca.xlsx");
+		File file = new File(planilha);
 		
 		if(!file.exists()) {
 			System.out.println("\nExecução interrompida. Arquivo não localizado.\n");
@@ -168,7 +171,7 @@ public class ExcelUtils {
 	public Livro buscarLivro(String nome) throws IOException {
 		
 		
-		File file = new File("C:\\curso-java\\excel_treino\\src\\main\\resources\\biblioteca.xlsx");
+		File file = new File(planilha);
 		
 		if(!file.exists()) {
 			return null;
@@ -230,7 +233,7 @@ public class ExcelUtils {
 			return;
 		}
 		
-		File file = new File("C:\\curso-java\\excel_treino\\src\\main\\resources\\biblioteca.xlsx");
+		File file = new File(planilha);
 		
 		if(!file.exists()) {
 			System.out.println("\nExecução interrompida! Arquivo com os dados não localizado.\n");
@@ -310,7 +313,7 @@ public class ExcelUtils {
 	
 	public void devolverLivro(Livro livro, String dataDevolucao) throws IOException {
 		
-		File file = new File("C:\\curso-java\\excel_treino\\src\\main\\resources\\biblioteca.xlsx");
+		File file = new File(planilha);
 		
 		if(!file.exists()) {
 			System.out.println("\nExecução interrompida. Arquivo de dados não localizado.\n");
@@ -394,7 +397,7 @@ public class ExcelUtils {
 	
 	public void listarLivrosDisponiveis() throws IOException{
 		
-		File file = new File("C:\\curso-java\\excel_treino\\src\\main\\resources\\biblioteca.xlsx");
+		File file = new File(planilha);
 		
 		if(!file.exists()) {
 			System.out.println("\nExecução interrompida. Arquivo não localizado.\n");
@@ -458,7 +461,7 @@ public class ExcelUtils {
 	
 	public void excluirLivro(String id) throws IOException {
 		
-		File file = new File("C:\\curso-java\\excel_treino\\src\\main\\resources\\biblioteca.xlsx");
+		File file = new File(planilha);
 		
 		if(!file.exists()) {
 			System.out.println("Execução interrompida, arquivo de dados não localizado.");
@@ -517,7 +520,7 @@ public class ExcelUtils {
 	}//excluirLivro
 	
 	public void editarLivro(Livro livro) throws IOException {
-		File file = new File("C:\\curso-java\\excel_treino\\src\\main\\resources\\biblioteca.xlsx");
+		File file = new File(planilha);
 		
 		if(!file.exists()) {
 			System.out.println("\nExecução interrompida. Arquivo de dados não localizado.\n");
