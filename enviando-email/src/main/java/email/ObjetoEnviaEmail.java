@@ -28,7 +28,7 @@ public class ObjetoEnviaEmail {
 		
 	}
 
-	public void enviarEmail() throws Exception {
+	public void enviarEmail(boolean envioHtml) throws Exception {
 
 		/* Olhe as configurações smtp do seu email */
 
@@ -65,8 +65,12 @@ public class ObjetoEnviaEmail {
 		message.setRecipients(Message.RecipientType.TO, toUser);
 		// assunto
 		message.setSubject(assuntoEmail);
-		// mensagem
-		message.setText(textoEmail);
+		// mensagem do email (se for html envia de um jeito diferente)
+		if(envioHtml) {
+			message.setContent(textoEmail, "text/html; charset = utf-8");
+		}else {
+			message.setText(textoEmail);
+		}
 
 		// executar o envio
 		Transport.send(message);

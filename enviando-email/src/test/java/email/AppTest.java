@@ -10,13 +10,21 @@ public class AppTest{
 	@org.junit.Test
 	public void testeEmail() throws Exception{
 		
+		StringBuilder stringBuilderTextoEmail = new StringBuilder();
+		
+		stringBuilderTextoEmail.append("Olá <br/><br/>");
+		stringBuilderTextoEmail.append("Você está recebendo uma mensagem de teste em html <br/><br/>");
+		stringBuilderTextoEmail.append("<br/>Atenciosamente,<br/>Manoel Santiago");
+		
+		
+		
 		ObjetoEnviaEmail enviaEmail = new ObjetoEnviaEmail(
 				"manoel.santiago1@gmail.com",
 				"Manoel Santiago",
 				"Email de teste da nova classe",
-				"Isto é o corpo do email. Uma mensagem de teste. Mensagem criada de forma dinâmica.");
+				stringBuilderTextoEmail.toString());
 		
-		enviaEmail.enviarEmail();		
+		enviaEmail.enviarEmail(true);		
 		
 	}
    
