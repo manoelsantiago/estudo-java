@@ -21,7 +21,7 @@ import junit.framework.TestSuite;
 public class AppTest{
 	
 	private String userName = "mspneto10@gmail.com";
-	private String senha = "mcuk rwny ubhl aqhs";
+	private String senha = "xxxxxxxx";
 	
 	/*Junit Test serve para rodar teste sem precisar criar main*/
 	@org.junit.Test
