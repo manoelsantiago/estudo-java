@@ -14,7 +14,7 @@ public class AppTest{
 				"manoel.santiago1@gmail.com",
 				"Manoel Santiago",
 				"Email de teste da nova classe",
-				"Isto é o corpo do email. Uma mensagem de teste.");
+				"Isto é o corpo do email. Uma mensagem de teste. Mensagem criada de forma dinâmica.");
 		
 		enviaEmail.enviarEmail();		
 		
